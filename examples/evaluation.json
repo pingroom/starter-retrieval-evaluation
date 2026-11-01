@@ -1,0 +1,42 @@
+{
+  "evaluationId": "craft-search",
+  "title": "Craft help search",
+  "rubric": "2: answers the query. 1: useful partial answer. 0: unrelated. Unknown: cannot judge the snippet.",
+  "rankers": {
+    "a": "Current order",
+    "b": "Proposed order"
+  },
+  "queries": [
+    {
+      "id": "paper",
+      "text": "How can I fold a paper envelope?",
+      "k": 2,
+      "candidates": [
+        {
+          "id": "fold",
+          "snippet": "Fold the lower corners inward, overlap the sides, then fold the top flap down."
+        },
+        {
+          "id": "size",
+          "snippet": "Choose paper that is larger than your letter before starting."
+        },
+        {
+          "id": "tools",
+          "snippet": "Clean paint brushes with water after making a watercolor picture."
+        }
+      ],
+      "rankings": {
+        "a": [
+          "tools",
+          "fold",
+          "size"
+        ],
+        "b": [
+          "fold",
+          "size",
+          "tools"
+        ]
+      }
+    }
+  ]
+}
